@@ -1,0 +1,213 @@
+
+:root {
+    --primary-color-light_purple: hsl(252, 6%, 83%);
+    --primary-color-dark_purple: hsl(248, 70%, 10%);
+    --primary-color-hover-purple: hsl(245deg 15% 58% / 40%);
+    --primary-color-button_orenge: hsl(7, 88%, 67%);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*{
+    font-family: Inconsolata;
+}
+body {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+@font-face{
+    font-family: Inconsolata;
+    src: url(../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+.whole {
+    position: relative;
+    background-image: url("../img/background-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    width: 100vw;
+}
+.picture {
+    display: flex;
+    justify-content: center;
+}
+picture img {
+    width: 100%;
+}
+.line-top {
+    position: absolute;
+    top: 7%;
+    right: 0%;
+    z-index: 1;
+}
+.line-bottom {
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+}
+.lines {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.lines img {
+    width: auto;
+    height: auto;
+}
+.circle-top {
+    position: absolute;
+    top: -10%;
+    left: 2%;
+}
+.circle-top img {
+    width: 100%;
+}
+.circle-middle {
+    position: absolute;
+    top: 49%;
+    left: 67.3%;
+}
+
+.circle-middle img {
+    width: 100%;
+}
+.logo {
+    text-align: center;
+    padding-top: 30px;
+    z-index: 1;
+    position: relative;
+}
+.title {
+    text-align: center;
+    font-size: 50px;
+    width: 750px;
+    margin: 50px auto 0 auto;
+}
+.sub_title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--primary-color-light_purple);
+}
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* container ↓↓↓*/
+.container {
+    max-width: 450px;
+    margin: 50px auto 50px auto;
+    position: relative;
+    z-index: 5;
+}
+.upload__area {
+    border: 1px dashed #a49cd3;
+    border-radius: 8px;
+    background-color: hsl(249.73deg 32.88% 31.52% / 29%);
+    padding: 15px;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+.upload__area:hover {
+    background-color: var(--primary-color-hover-purple);
+}
+.upload__area:focus {
+    border: 1px dashed #a49cd3;
+    outline: 2px solid #a49cd3;
+    outline-offset: 2px;
+}
+.upload-icon {
+    text-align: center;
+    cursor: pointer;
+}
+.upload-icon-img {
+    background-color: #342f51;
+    padding: 5px;
+    border: solid 0.2px #524b79;
+    border-radius: 10px;
+}
+.upload__text {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--primary-color-light_purple);
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+    margin-bottom: 20px;
+}
+.upload__caption {
+    color: var(--primary-color-light_purple);
+    font-size: 12px;
+    padding-left: 5px;
+    padding-top: 2px;
+}
+.input {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: hsl(249.73deg 32.88% 31.52% / 29%);
+    border: 1px solid #a49cd3;
+    color: #fff;
+    margin: 10px 0 20px 0;
+    display: block;
+    padding: 3%;
+    font-size: 18px;
+    color: var(--primary-color-light_purple);
+    cursor: pointer;
+}
+input::placeholder {
+    color: var(--primary-color-light_purple);
+}
+input:hover {
+    background-color: var(--primary-color-hover-purple);
+}
+input:focus {
+    border: 1px double #a49cd3;
+    outline: 2px solid #a49cd3; 
+    outline-offset: 2px;
+}
+.button {
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--primary-color-button_orenge);
+    color: var(--primary-color-dark_purple);
+    border: none;
+    font-weight: 900;
+    font-size: 18px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: hsl(7, 71%, 60%);
+    box-shadow: 0 6px 0 var(--primary-color-button_orenge);
+}
+.button:focus {
+    border: 2px solid var(--primary-color-dark_purple); 
+    outline: 2px solid #a49cd3;
+}
+.space {
+    height: 150px;
+}
+.email__error {
+    margin-top: -8px;
+}
+.error-text {
+    color: hsl(7, 86%, 67%);
+    font-size: 12px;
+    padding-left: 5px;
+    padding-top: 2px;
+}
+.hidden {
+    display: none;
+}

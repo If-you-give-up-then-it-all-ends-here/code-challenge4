@@ -1,57 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Conference ticket generator</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-32x32.png">
+    <title>code-challenge3</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base_sp.css">
+  </head>
 <body>
+  <div class="whole">
+    <p class="line-top"><img src="img/pattern-squiggly-line-top.svg"></p>
+    <picture class="picture line-bottom">
+      <source media="(min-width: 901px)" srcset="./img/pattern-squiggly-line-bottom-desktop.svg">
+      <img src="./img/pattern-squiggly-line-bottom-mobile-tablet.svg">
+    </picture>
+    <p class="lines"><img src="img/pattern-lines.svg"></p>
+    <p class="circle-top"><img src="img/pattern-circle.svg"></p>
+    <p class="circle-middle"><img src="img/pattern-circle.svg"></p>
+    
 
-  <!-- Form starts -->
+    <p class="logo"><img src="img/logo-full.svg" alt=""></p>
+    <div class="content">
+      <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p class="sub_title">Secure your spot at next year's biggest coding conference.</p>
+    </div>
 
-  Your Journey to Coding Conf 2025 Starts Here!
+    <div class="container">
 
-  Secure your spot at next year's biggest coding conference.
+      <!-- Upload Avatar -->
+      <label for="fileInput">Upload Avatar</label>
+      <div class="upload__area" tabindex="0" id="dropArea"><!-- tabindex="0" を追加で、フォーカス可能になり :focus が適用 -->
+        <label for="fileInput">
+          <p class="upload-icon">
+              <img src="img/icon-upload.svg" class="upload-icon-img" id="uploadIcon">
+          </p>
+          <p class="upload__text">Drag and drop or click to upload</p>
+        <input type="file" id="fileInput" accept="image/*" hidden>
+      </label>
+      </div>
+      <div class="flex">
+        <p><img src="img/icon-info.svg"></p>
+        <p class="upload__caption">Upload your photo (JPG or PNG, max size: 500KB).</p>
+      </div>
 
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
+      <!-- Fillname -->
+      <label for="fillname">Full Name</label>
+      <input type="text" id="fillname" class="input" autocomplete="on"><!-- autocompleteをonで自動入力を有効にする -->
 
-  Full Name
+      <!-- Email address -->
+      <label for="email">Email Address</label>
+      <input type="text" id="email" class="input" placeholder="example@email.com" autocomplete="on">
+      <div class="flex email__error hidden">
+        <p class="error-icon"><img src="img/icon-info.svg"></p>
+        <p class="error-text">please enter a valid email address.</p>
+      </div>
 
-  Email Address
-  example@email.com
+      <!-- GitHub Username -->
+      <label for="username">GitHub Username</label>
+      <input type="text" id="username" class="input" placeholder="@yourusername" autocomplete="on">
 
-  GitHub Username
-  @yourusername
+      <button class="button">Generate My Ticket</button>
+      <div class="space"></div>
 
-  Generate My Ticket
+    </div>
 
-  <!-- Form ends -->
 
-  <!-- Generated tickets starts -->
+  </div><!-- whole -->
 
-  Congrats, <!-- Full Name -->! Your ticket is ready.
 
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
-
-  <!-- Generated tickets ends -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
