@@ -23,7 +23,8 @@ body {
     font-family: Inconsolata;
     src: url(../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
-.whole {
+.wrapper {
+    overflow: hidden;
     position: relative;
     background-image: url("../img/background-desktop.png");
     background-size: cover;
@@ -166,13 +167,13 @@ picture img {
     color: var(--primary-color-light_purple);
     cursor: pointer;
 }
-input::placeholder {
+.input::placeholder {
     color: var(--primary-color-light_purple);
 }
-input:hover {
+.input:hover {
     background-color: var(--primary-color-hover-purple);
 }
-input:focus {
+.input:focus {
     border: 1px double #a49cd3;
     outline: 2px solid #a49cd3; 
     outline-offset: 2px;
@@ -187,6 +188,7 @@ input:focus {
     font-weight: 900;
     font-size: 18px;
     cursor: pointer;
+    margin-bottom: 150px;
 }
 .button:hover {
     background-color: hsl(7, 71%, 60%);
@@ -210,4 +212,93 @@ input:focus {
 }
 .hidden {
     display: none;
+}
+
+
+/* thanks Page */
+.thanks-sub_title {
+    max-width: 350px;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 25px;
+    color: #ffffff9e;
+}
+.name {
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%)); /* ✅ 左オレンジ → 右白 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mail {
+    color: var(--primary-color-button_orenge);
+}
+.ticket_container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    max-width: 600px;
+    z-index: 5;
+}
+.ticket_number {
+    font-size: 35px;
+    color: #ffffff4f;
+    transform: rotate(90deg);
+    top: 43%;
+    position: absolute;
+    right: 0%;
+}
+.ticket_inner {
+    position: absolute;
+    width: 73%;
+    top: 4%;
+    left: 54%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    margin-left: -14%;
+}
+.ticket_inner-heading {
+    margin-bottom: 3%;
+    margin-top: 3%;
+    display: flex;
+}
+.ticket_inner-heading_text {
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+.ticket_inner-date {
+    text-align: left;
+    margin-left: 13%;
+    color: #ffffff9e;
+    letter-spacing: 2.5px;
+}
+.ticket_inner-wrap {
+    display: flex;
+    margin-top: 19%;
+}
+.avatar {
+    text-align: left;
+}
+.avatar img {
+    width: 50%;
+    border-radius: 15px;
+}
+.ticket_inner-info {
+    margin-left: -15%;
+    align-self: end;
+}
+.ticket_inner-name {
+    font-size: 30px;
+}
+.ticket_github-wrap {
+    align-items: center;
+    display: flex;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    color: #ffffff9e;
+}
+.ticket_github-id {
+    margin-left: 12px;
 }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 900px) {
-    .whole {
+    .wrapper {
         background-image: url("../img/background-tablet.png");
     }
     .title {
@@ -26,15 +26,31 @@
     .line-top img {
         width: 70%;
     }
+
+
+    
+    /* thanks Page */
+    .ticket_container {
+        width: 90%;
+    }
+    .ticket_img {
+        width: 100%;
+    }
+    .ticket_inner-heading_logo img {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 700px) {
     .line-top img {
         width: 50%;
     }
+    .ticket_inner-wrap {
+        margin-top: 15%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .whole {
+    .wrapper {
         background-image: url("../img/background-mobile.png");
     }
     .title {
@@ -53,13 +69,88 @@
     .input, .upload__caption{
         margin-bottom: 35px;
     }
+    .ticket_number {
+        font-size: 32px;/* 35px */
+    }
+    .ticket_inner-heading_text {
+        font-size: 35px;/* 40px */
+    }
+    .ticket_inner-date {
+        font-size: 14px;/* 16px */
+        letter-spacing: 2px;
+        margin-left: 17%;
+    }
+    .ticket_inner-wrap {
+        margin-top: 12%;
+    }
+    .avatar img {
+        border-radius: 10px;
+    }
+    .ticket_inner-name {
+        font-size: 27px;/* 30px */
+    }
+    .ticket_inner-info {
+        margin-left: -16%;
+    }
+    .ticket_inner-info {
+        font-size: 14px;/* 16px */
+    }
+    .ticket_github-id {
+        margin-left: 6px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .ticket_number {
+        font-size: 30px;/* 35px */
+        top: 42%;
+        right: -1%;
+    }
+    .ticket_inner-heading_text {
+        font-size: 30px;/* 40px */
+    }
+    .ticket_inner-heading {
+        margin-bottom: 0%;
+    }
+    .ticket_inner-date {
+        letter-spacing: 1px;
+        margin-left: 20%;
+    }
+    .ticket_inner-wrap {
+        margin-top: 6%;
+    }
+    .ticket_inner-name {
+        font-size: 21px;/* 30px */
+    }
+    .ticket_inner-info {
+        margin-left: -20%;
+    }
+    .avatar img {
+        width: 45%;
+    }
 }
 @media screen and (max-width: 400px) {
     .title {
-        font-size: 25px;
+        font-size: 28px;
         margin: 30px auto 0 auto;
     }
     .line-top {
         top: 2%;
+    }
+    .ticket_number {
+        font-size: 26px;/* 35px */
+        top: 41%;
+        right: -1%;
+    }
+    .ticket_inner-heading_text {
+        font-size: 27px;/* 40px */
+    }
+    .ticket_inner-wrap {
+        margin-top: 7%;
+    }
+    .ticket_inner-name {
+        font-size: 20px;/* 30px */
+    }
+    .ticket_inner-date {
+        font-size: 12px;/* 16px */
     }
 }
