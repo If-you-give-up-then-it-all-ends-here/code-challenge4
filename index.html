@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="css/base_sp.css">
   </head>
 <body>
-  <div class="wrapper">
-    <p class="line-top"><img src="img/pattern-squiggly-line-top.svg"></p>
+  <main class="top_wrapper" id="top_wrapper">
+    <div class="line-top"><img src="img/pattern-squiggly-line-top.svg" alt="line"></div>
     <picture class="picture line-bottom">
       <source media="(min-width: 901px)" srcset="./img/pattern-squiggly-line-bottom-desktop.svg">
       <img src="./img/pattern-squiggly-line-bottom-mobile-tablet.svg">
     </picture>
-    <p class="lines"><img src="img/pattern-lines.svg"></p>
-    <p class="circle-top"><img src="img/pattern-circle.svg"></p>
-    <p class="circle-middle"><img src="img/pattern-circle.svg"></p>
+    <div class="lines"><img src="img/pattern-lines.svg" alt="line"></div>
+    <div class="circle-top"><img src="img/pattern-circle.svg" alt="circle"></div>
+    <div class="circle-middle"><img src="img/pattern-circle.svg" alt="circle"></div>
     
 
-    <p class="logo"><img src="img/logo-full.svg" alt=""></p>
+    <div class="logo"><img src="img/logo-full.svg" alt="logo"></div>
     <div class="content">
       <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
       <p class="sub_title">Secure your spot at next year's biggest coding conference.</p>
@@ -33,27 +33,35 @@
       <label for="fileInput">Upload Avatar</label>
       <div class="upload__area" tabindex="0" id="dropArea"><!-- tabindex="0" を追加で、フォーカス可能になり :focus が適用 -->
         <label for="fileInput">
-          <p class="upload-icon">
-              <img src="img/icon-upload.svg" class="upload-icon-img" id="uploadIcon">
-          </p>
-          <p class="upload__text">Drag and drop or click to upload</p>
-        <input type="file" id="fileInput" accept="image/*" hidden>
-      </label>
+          <div class="upload-icon">
+              <img src="img/icon-upload.svg" class="upload-icon-img" id="uploadIcon" alt="icon">
+          </div>
+          <p class="upload__text" id="upload__text">Drag and drop or click to upload</p>
+
+          <div class="change-img hidden" id="change-img">
+            <p class="remove-txt" id="remove">Remove image</p>
+            <p class="change-txt" id="change">Change image</p>
+          </div>
+
+          <input type="file" id="fileInput" accept="image/*" hidden>
+        </label>
       </div>
       <div class="flex">
-        <p><img src="img/icon-info.svg"></p>
-        <p class="upload__caption">Upload your photo (JPG or PNG, max size: 500KB).</p>
+        <div><img src="img/icon-info.svg" alt="icon"></div>
+        <p class="upload__caption" id="error-upload__caption">Upload your photo (JPG or PNG, max size: 500KB).</p>
       </div>
 
+    
+
       <!-- Fillname -->
-      <label for="fillName">Full Name</label>
-      <input type="text" id="fillName" class="input" autocomplete="on"><!-- autocompleteをonで自動入力を有効にする -->
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" class="input" autocomplete="on"><!-- autocompleteをonで自動入力を有効にする -->
 
       <!-- Email address -->
       <label for="email">Email Address</label>
       <input type="text" id="email" class="input" placeholder="example@email.com" autocomplete="on">
-      <div class="flex email__error hidden">
-        <p class="error-icon"><img src="img/icon-info.svg"></p>
+      <div class="flex email__error hidden" id="error-text">
+        <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
         <p class="error-text">please enter a valid email address.</p>
       </div>
 
@@ -61,12 +69,12 @@
       <label for="username">GitHub Username</label>
       <input type="text" id="username" class="input" placeholder="@yourusername" autocomplete="on">
 
-      <button class="button">Generate My Ticket</button>
+      <button class="button" id="button">Generate My Ticket</button>
 
     </div>
 
 
-  </div><!-- wrapper -->
+  </main><!-- wrapper -->
 
 
 
@@ -75,21 +83,30 @@
 
 
 
-  <div class="wrapper">
-    <p class="line-top"><img src="img/pattern-squiggly-line-top.svg"></p>
+  <main class="thanks_wrapper hidden" id="thanks_wrapper">
+    <div class="line-top"><img src="img/pattern-squiggly-line-top.svg" alt="line"></div>
     <picture class="picture line-bottom">
       <source media="(min-width: 901px)" srcset="./img/pattern-squiggly-line-bottom-desktop.svg">
       <img src="./img/pattern-squiggly-line-bottom-mobile-tablet.svg">
     </picture>
-    <p class="lines"><img src="img/pattern-lines.svg"></p>
-    <p class="circle-top"><img src="img/pattern-circle.svg"></p>
-    <p class="circle-middle"><img src="img/pattern-circle.svg"></p>
-    
+    <div class="lines" alt="line"><img src="img/pattern-lines.svg"></div>
+    <div class="circle-top" alt="circle"><img src="img/pattern-circle.svg"></div>
+    <div class="circle-middle" alt="circle"><img src="img/pattern-circle.svg"></div>
 
-    <p class="logo"><img src="img/logo-full.svg"></p>
-    <div class="content thanks_content">
-      <h1 class="title">Congrats, <span class="name">Jonatan Kristof!</span><br>Your ticket is ready.</h1>
-      <p class="thanks-sub_title">We've emaild your ticket to <span class="mail">jonatan@email.com</span> and will send updates in the run up to the event.</p>
+
+    <div class="ticket">
+      <p class="ticket__logo">
+        <img src="img/logo-full.svg" alt="logo">
+      </p>
+      <div class="ticket__content">
+        <h1 class="ticket__title title">
+          Congrats, <span class="ticket__name">Jonatan Kristof!</span><br>Your ticket is ready.
+        </h1>
+        <p class="ticket__subtitle">
+          We've emaild your ticket to <span class="ticket__email">jonatan@email.com</span> 
+          and will send updates in the run up to the event.
+        </p>
+      </div>
     </div>
 
     <div class="ticket_container">
@@ -97,18 +114,18 @@
       <p class="ticket_number">#01609</p>
         <div class="ticket_inner">
           <div class="ticket_inner-heading">
-            <p class="ticket_inner-heading_logo"><img src="img/logo-mark.svg"></p>
+            <p class="ticket_inner-heading_logo"><img src="img/logo-mark.svg" alt="logo"></p>
             <p class="ticket_inner-heading_text">Coding Conf</p>
           </div>
           <p class="ticket_inner-date">Jan 31 , 2025 / Austin, TX</p>
 
           <!-- 写真と名前とgithubのdiv -->
           <div class="ticket_inner-wrap">
-            <p class="avatar"><img src="img/image-avatar.jpg"></p>
+            <div class="avatar"><img src="img/image-avatar.jpg"></div>
             <div class="ticket_inner-info">
               <p class="ticket_inner-name">Jonatan Kristof</p>
-              <div class="ticket_github-wrap">
-                <p class="ticket_github-icon"><img src="img/icon-github.svg"></p>
+              <div class="ticket_github">
+                <div class="ticket_github-icon"><img src="img/icon-github.svg" alt="github logo"></div>
                 <p class="ticket_github-id">@jonatankristof0101</p>
               </div>
             </div>
@@ -119,8 +136,11 @@
 
 
 
-  </div><!-- wrapper -->
+  </main><!-- wrapper -->
 
 
+
+
+  <script src="js/validation.js"></script>
 </body>
 </html>
