@@ -203,8 +203,9 @@ picture img {
 .space {
     height: 150px;
 }
-.email__error {
-    margin-top: -8px;
+.error__msg {
+    margin-top: -15px;
+    margin-bottom: 30px;
 }
 .error-text {
     color: hsl(7, 86%, 67%);
@@ -231,6 +232,10 @@ picture img {
     background-color: #ffffff24;
     padding: 1% 2%;
     border-radius: 3px;
+}
+.remove-txt {
+    position: relative;
+    z-index: 99;
 }
 
 

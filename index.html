@@ -43,7 +43,7 @@
             <p class="change-txt" id="change">Change image</p>
           </div>
 
-          <input type="file" id="fileInput" accept="image/*" hidden>
+          <input type="file" id="fileInput" accept="image/*" class="js_avatar" hidden>
         </label>
       </div>
       <div class="flex">
@@ -55,19 +55,28 @@
 
       <!-- Fillname -->
       <label for="fullName">Full Name</label>
-      <input type="text" id="fullName" class="input" autocomplete="on"><!-- autocompleteをonで自動入力を有効にする -->
+      <input type="text" id="fullName" class="input js_fullName" autocomplete="on"><!-- autocompleteをonで自動入力を有効にする -->
+      <div class="flex error__msg hidden js_nameError-text" id="nameError-text">
+        <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
+        <p class="error-text">Please enter your name.</p>
+      </div>
 
       <!-- Email address -->
       <label for="email">Email Address</label>
-      <input type="text" id="email" class="input" placeholder="example@email.com" autocomplete="on">
-      <div class="flex email__error hidden" id="error-text">
+      <input type="text" id="email" class="input js_email" placeholder="example@email.com" autocomplete="on">
+      <div class="flex error__msg hidden js_emailError-text" id="emailError-text">
         <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
         <p class="error-text">please enter a valid email address.</p>
       </div>
 
       <!-- GitHub Username -->
       <label for="username">GitHub Username</label>
-      <input type="text" id="username" class="input" placeholder="@yourusername" autocomplete="on">
+      <input type="text" id="username" class="input js_username" placeholder="@yourusername" autocomplete="on">
+      <div class="flex error__msg hidden js_githubError-text" id="githubError-text">
+        <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
+        <p class="error-text">Please enter your GitHub Username.</p>
+      </div>
+      
 
       <button class="button" id="button">Generate My Ticket</button>
 
@@ -95,9 +104,9 @@
 
 
     <div class="ticket">
-      <p class="ticket__logo">
+      <div class="ticket__logo">
         <img src="img/logo-full.svg" alt="logo">
-      </p>
+      </div>
       <div class="ticket__content">
         <h1 class="ticket__title title">
           Congrats, <span class="ticket__name">Jonatan Kristof!</span><br>Your ticket is ready.
@@ -114,7 +123,7 @@
       <p class="ticket_number">#01609</p>
         <div class="ticket_inner">
           <div class="ticket_inner-heading">
-            <p class="ticket_inner-heading_logo"><img src="img/logo-mark.svg" alt="logo"></p>
+            <div class="ticket_inner-heading_logo"><img src="img/logo-mark.svg" alt="logo"></div>
             <p class="ticket_inner-heading_text">Coding Conf</p>
           </div>
           <p class="ticket_inner-date">Jan 31 , 2025 / Austin, TX</p>
