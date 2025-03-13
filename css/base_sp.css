@@ -122,10 +122,12 @@
         font-size: 21px;/* 30px */
     }
     .ticket_inner-info {
-        margin-left: -20%;
+        margin-left: -25%;
+        margin-top: 8%;
     }
     .avatar img {
         width: 45%;
+        height: 45%;
     }
 }
 @media screen and (max-width: 400px) {
@@ -145,7 +147,7 @@
         font-size: 27px;/* 40px */
     }
     .ticket_inner-wrap {
-        margin-top: 7%;
+        margin-top: 5%;
     }
     .ticket_inner-name {
         font-size: 20px;/* 30px */

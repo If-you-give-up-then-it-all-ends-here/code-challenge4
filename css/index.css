@@ -304,14 +304,18 @@ picture img {
 }
 .avatar {
     text-align: left;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
 }
 .avatar img {
     width: 50%;
     border-radius: 15px;
+    object-fit: cover;
 }
 .ticket_inner-info {
     margin-left: -15%;
-    align-self: end;
+    margin-top: 5%;
 }
 .ticket_inner-name {
     font-size: 30px;

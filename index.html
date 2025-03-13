@@ -43,7 +43,7 @@
             <p class="change-txt" id="change">Change image</p>
           </div>
 
-          <input type="file" id="fileInput" accept="image/*" class="js_avatar" hidden>
+          <input type="file" id="fileInput" accept="image/*" hidden>
         </label>
       </div>
       <div class="flex">
@@ -56,7 +56,7 @@
       <!-- Fillname -->
       <label for="fullName">Full Name</label>
       <input type="text" id="fullName" class="input js_fullName" autocomplete="on"><!-- autocompleteをonで自動入力を有効にする -->
-      <div class="flex error__msg hidden js_nameError-text" id="nameError-text">
+      <div class="flex error__msg hidden js_nameError-text">
         <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
         <p class="error-text">Please enter your name.</p>
       </div>
@@ -64,7 +64,7 @@
       <!-- Email address -->
       <label for="email">Email Address</label>
       <input type="text" id="email" class="input js_email" placeholder="example@email.com" autocomplete="on">
-      <div class="flex error__msg hidden js_emailError-text" id="emailError-text">
+      <div class="flex error__msg hidden js_emailError-text">
         <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
         <p class="error-text">please enter a valid email address.</p>
       </div>
@@ -72,7 +72,7 @@
       <!-- GitHub Username -->
       <label for="username">GitHub Username</label>
       <input type="text" id="username" class="input js_username" placeholder="@yourusername" autocomplete="on">
-      <div class="flex error__msg hidden js_githubError-text" id="githubError-text">
+      <div class="flex error__msg hidden js_githubError-text">
         <div class="error-icon"><img src="img/icon-info.svg" alt="icon"></div>
         <p class="error-text">Please enter your GitHub Username.</p>
       </div>
@@ -109,10 +109,10 @@
       </div>
       <div class="ticket__content">
         <h1 class="ticket__title title">
-          Congrats, <span class="ticket__name">Jonatan Kristof!</span><br>Your ticket is ready.
+          Congrats, <span class="ticket__name js_thanks-name" id="thanksName"></span><br>Your ticket is ready.
         </h1>
         <p class="ticket__subtitle">
-          We've emaild your ticket to <span class="ticket__email">jonatan@email.com</span> 
+          We've emaild your ticket to <span class="ticket__email" id="emailValue"></span> 
           and will send updates in the run up to the event.
         </p>
       </div>
@@ -130,12 +130,12 @@
 
           <!-- 写真と名前とgithubのdiv -->
           <div class="ticket_inner-wrap">
-            <div class="avatar"><img src="img/image-avatar.jpg"></div>
+            <div class="avatar" id="avatar"><img src="" alt="avatar"></div>
             <div class="ticket_inner-info">
-              <p class="ticket_inner-name">Jonatan Kristof</p>
+              <p class="ticket_inner-name js_thanks-name"></p>
               <div class="ticket_github">
                 <div class="ticket_github-icon"><img src="img/icon-github.svg" alt="github logo"></div>
-                <p class="ticket_github-id">@jonatankristof0101</p>
+                <p class="ticket_github-id" id="usernameValue"></p>
               </div>
             </div>
           </div>
